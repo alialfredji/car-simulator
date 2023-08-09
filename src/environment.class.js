@@ -103,7 +103,7 @@ module.exports = class Environment {
 	}
 
 	carWillCrash (newX, newY) {
-		return newX < 0 || newX > this.dimension.x || newY < 0 || newY > this.dimension.y;
+		return newX < 0 || newX >= this.dimension.x || newY < 0 || newY >= this.dimension.y;
 	}
 
 	getExpectedCarPosition (command) {
